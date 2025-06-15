@@ -6,9 +6,9 @@
     "apiDescriptionUrl": "https://auth.microdeets.com/kyc/v3/api-docs"
   },
   {
-    "username": "user",
-    "password": "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb",
-    "apiDescriptionUrl": "https://raw.githubusercontent.com/stoplightio/Public-APIs/master/reference/zoom/openapi.yaml"
+    "username": "learn",
+    "password": "$2a$12$piuCfv/vs1VgkgtMoY2Fy.y5kNXAnZBYWy3onGncYw7VbZyrpdYfC",
+    "apiDescriptionUrl": "https://duolearnupapi.microdeets.com/learn/v3/api-docs"
   }
 ]
 
