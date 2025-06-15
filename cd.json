@@ -11,5 +11,3 @@
     "apiDescriptionUrl": "https://duolearnupapi.microdeets.com/learn/v3/api-docs"
   }
 ]
-
-// for password ueses SHA-256 hashing try: https://emn178.github.io/online-tools/sha256.html
