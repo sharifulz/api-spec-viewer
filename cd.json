@@ -7,8 +7,9 @@
   },
   {
     "username": "learn",
-    "password": "$2a$12$piuCfv/vs1VgkgtMoY2Fy.y5kNXAnZBYWy3onGncYw7VbZyrpdYfC",
+    "password": "6a8da52e920664ef15b3c36c0edb24e27e6604bb2dc2f6c7c1f1f5076ff28ee9",
     "apiDescriptionUrl": "https://duolearnupapi.microdeets.com/learn/v3/api-docs"
   }
 ]
 
+// for password ueses SHA-256 hashing try: https://emn178.github.io/online-tools/sha256.html
