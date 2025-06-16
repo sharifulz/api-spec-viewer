@@ -1,6 +1,11 @@
 
 [
   {
+    "username": "common",
+    "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+    "apiDescriptionUrl": "https://gateway.microdeets.com/v3/api-docs"
+  },
+  {
     "username": "admin",
     "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
     "apiDescriptionUrl": "https://auth.microdeets.com/kyc/v3/api-docs"
