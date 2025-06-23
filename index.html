@@ -88,68 +88,17 @@
                 padding: 0 0.5rem;
             }
         }
-
-        #sidebar {
-            position: fixed;
-            top: 56px;
-            bottom: 0;
-            left: 0;
-            width: 200px;
-            background-color: #343a40;
-            padding: 1rem;
-            overflow-y: auto;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-            z-index: 1040;
-        }
-
-        #sidebar a {
-            color: #fff;
-            display: block;
-            padding: 0.5rem 0;
-        }
-
-        #content {
-            flex: 1 0 0;
-            padding: 1rem;
-            margin-top: 56px;
-            transition: margin-left 0.3s ease;
-        }
-
-        @media (min-width: 768px) {
-            #sidebar {
-                transform: translateX(0);
-            }
-            #content {
-                margin-left: 200px;
-            }
-            #sidebar.collapsed {
-                transform: translateX(-200px);
-            }
-            #content.collapsed {
-                margin-left: 0;
-            }
-        }
-
-        @media (max-width: 767.98px) {
-            #sidebar.show {
-                transform: translateX(0);
-            }
-        }
     </style>
 </head>
 
 <body>
 
 <header>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <button class="btn btn-outline-light mr-2" id="sidebarToggle">
-        <i class="fa fa-bars"></i>
-    </button>
-    <a class="navbar-brand" href="#">API Documentation</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">API Documentation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -162,15 +111,6 @@
         </div>
     </nav>
 </header>
-
-<div id="sidebar">
-    <ul class="list-unstyled">
-        <li><a href="#">Home</a></li>
-        <li><a href="#" id="sidebarLogout" style="display: none;">Logout</a></li>
-    </ul>
-</div>
-
-<div id="content">
 
 <div class="login-container">
     <h3 class="login-title">Log In</h3>
@@ -207,8 +147,6 @@
             layout="stacked"
     />
 </main>
-
-</div>
 
 <footer class="footer mb-2">
     <div class="container text-center">
@@ -279,7 +217,6 @@
                 document.querySelector('.login-container').style.display = 'none';
                 document.getElementById('errorMessage').style.display = 'none';
                 document.getElementById('userNav').style.display = 'flex';
-                document.getElementById('sidebarLogout').style.display = 'block';
 
                 // Create new elements-api component
                 const main = document.querySelector('main');
@@ -305,36 +242,21 @@
     });
 
     // Logout functionality
-document.querySelectorAll('#logoutBtn, #sidebarLogout').forEach(btn => btn.addEventListener('click', function(e) {
+    document.getElementById('logoutBtn').addEventListener('click', function(e) {
         e.preventDefault();
         document.querySelector('.login-container').style.display = 'block';
         document.querySelector('main').style.display = 'none';
         document.getElementById('userNav').style.display = 'none';
-        document.getElementById('sidebarLogout').style.display = 'none';
         document.getElementById('password').value = '';
 
         // Clear the API content on logout
-    document.querySelector('main').innerHTML = `
+        document.querySelector('main').innerHTML = `
         <elements-api
             apiDescriptionUrl=""
             router="hash"
             layout="stacked"
         />`;
-    }));
-
-    // Sidebar toggle
-    const sidebarToggle = document.getElementById('sidebarToggle');
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-    sidebarToggle.addEventListener('click', function() {
-        if (window.innerWidth < 768) {
-            sidebar.classList.toggle('show');
-        } else {
-            sidebar.classList.toggle('collapsed');
-            content.classList.toggle('collapsed');
-        }
     });
 </script>
 </body>
 </html>
-
