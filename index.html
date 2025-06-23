@@ -28,8 +28,13 @@
 
         main {
             flex: 1 0 0;
-            overflow: hidden;
+            width: 100%;
+            overflow: auto;
             display: none;
+        }
+
+        elements-api {
+            width: 100%;
         }
 
         .login-container {
@@ -69,6 +74,19 @@
         .loading-spinner {
             display: none;
             margin-left: 10px;
+        }
+
+        @media (max-width: 576px) {
+            .login-container {
+                padding: 1rem;
+                max-width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            main {
+                padding: 0 0.5rem;
+            }
         }
     </style>
 </head>
