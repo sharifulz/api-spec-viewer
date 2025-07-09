@@ -27,6 +27,9 @@ api-spec-viewer/
 └── README.txt             # Project documentation
 ```
 
+## Genreate HASH password (SHA-256) from here:
+https://www.onlinewebtoolkit.com/hash-generator
+
 ## ⚙️ Configuration
 
 This project uses Stoplight Elements' `<elements-api>` component. You can configure it in the `index.html` like this:
